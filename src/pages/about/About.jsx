@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import './About.css';
 import merit from "../../assets/Merit-awards.jpg"
 import lei from "../../assets/dei.png"
