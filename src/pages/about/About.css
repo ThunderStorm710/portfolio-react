@@ -2,6 +2,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .landing-section {
     height: 100vh;
     display: flex;
@@ -9,11 +10,18 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
     background-image: url('../../assets/coding.png');
     background-size: cover;
     background-position: center;
     color: white;
+}
+
+.landing-section .overlay { /* Adicionado */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
+    z-index: 1;
 }
 
 .landing-section h1 {
@@ -24,6 +32,12 @@
 .landing-section p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+}
+.landing-section h1,
+.landing-section p,
+.landing-section .download-btn {
+    position: relative;
+    z-index: 2;
 }
 
 .download-btn {
@@ -36,11 +50,15 @@
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
 .download-btn:hover {
     background-color: #0056b3;
 }
+
+
 
 .section {
     display: flex;
@@ -66,22 +84,53 @@
     border-radius: 10px;
     margin-right: 20px;
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adicionado */
+    border: 2px solid #ddd; /* Adicionado */
 }
 
 .section-content {
     width: 60%;
-}
-
-.section:nth-child(odd) {
-    flex-direction: row-reverse;
+    background: #fff; /* Adicionado */
+    padding: 20px; /* Adicionado */
+    border-radius: 10px; /* Adicionado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionado */
 }
 
 .section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #333; /* Adicionado */
+}
+
+.section h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* Adicionado */
+}
+
+.section a {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* Adicionado */
 }
 
 .section p, .section ul {
     font-size: 1.2rem;
     line-height: 1.6;
+    color: #555; /* Adicionado */
+}
+.section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.section-image.mei {
+    width: 20%; /* Ajuste o valor conforme necessário */
+    height: auto;
+}
+
+.section-image.lei {
+    width: 10%; /* Ajuste o valor conforme necessário */
+    height: auto;
 }

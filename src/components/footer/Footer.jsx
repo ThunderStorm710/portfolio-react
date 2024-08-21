@@ -12,10 +12,7 @@ function Footer({theme}) {
                     © 2024 All rights reserved.
                 </div>
                 <div className="footer-icons">
-                    <a href="https://facebook.com" className={`text-${theme}`}>
-                        <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://linkedin.com" className={`text-${theme}`}>
+                    <a href="https://linkedin.com/pedro-ascensao" className={`text-${theme}`}>
                         <i className="fab fa-linkedin"></i>
                     </a>
                     <a href="https://github.com/ThunderStorm710" className={`text-${theme}`}>
