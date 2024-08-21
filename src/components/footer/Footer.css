@@ -1,18 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 .footer {
-    padding: 20px 50px !important;
+    padding-top: 40px;
     width: 100%;
     transition: background-color 0.5s ease, color 0.5s ease;
     font-family: 'Poppins', sans-serif;
     display: flex;
+    flex-direction: column; /* Altera a direção do layout para coluna */
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Altera a direção do layout para coluna */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 30px;
+    font-size: 3rem; /* Aumentado */
+    margin-bottom: 20px;
+    transition: font-size 0.3s ease; /* Adiciona transição suave */
+}
+
+.footer-icons i {
+    transition: transform 0.3s ease; /* Adiciona transição suave */
+}
+
+.footer-icons i:hover {
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o rato */
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center; /* Centraliza o texto */
 }
 
 /* Light Theme */
 .footer.light {
-    background-color: white; /* Fundo branco para o tema claro */
+    background-color: white;
     color: deepskyblue;
 }
 
@@ -24,9 +55,13 @@
     color: deepskyblue;
 }
 
+.footer.light .footer-icons i {
+    color: deepskyblue;
+}
+
 /* Dark Theme */
 .footer.dark {
-    background-color: black; /* Fundo preto para o tema escuro */
+    background-color: black;
     color: greenyellow;
 }
 
@@ -38,22 +73,8 @@
     color: greenyellow;
 }
 
-/* Footer Content Layout */
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.footer-icons {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-text {
-    font-size: 0.9rem;
-    font-weight: bold;
+.footer.dark .footer-icons i {
+    color: greenyellow;
 }
 
 /* Adjust layout for mobile view */
@@ -62,11 +83,12 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding-top: 30px;
     }
 
     .footer-content {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
     }
 
     .footer-icons {

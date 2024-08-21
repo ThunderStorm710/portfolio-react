@@ -1,53 +1,61 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from '../../components/navbar/Navbar';
-import Footer from '../../components/footer/Footer';
-import cisuc from '../../assets/CISUC.png';
-import uc from '../../assets/UC.png';
+import React, { useState, useEffect } from 'react';
 import './About.css';
 
-function Home({ theme }) {
-    const scrollToSection = () => {
-        const section = document.getElementById('about-me');
-        section.scrollIntoView({ behavior: 'smooth' });
+function About() {
+    const [theme, setTheme] = useState('light');
+
+    useEffect(() => {
+        const sections = document.querySelectorAll('.section');
+
+        const options = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px',
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    }, []);
+
+    const toggleTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light');
     };
 
     return (
-        <div className={`home ${theme}`}>
-            <Navbar theme={theme} />
-            <header className={`hero ${theme}`}>
-                <div className="hero-content">
-                    <h1>Hello,</h1>
-                    <h2>I'm Pedro Ascensão</h2>
-                    <p>Web Designer & Developer</p>
-                    <Link to="/contact" className="btn">Contact Me</Link>
-                </div>
-                <img src={require('../../assets/person.webp')} alt="Person" className="hero-image" />
-            </header>
-            <div className={`arrow-down ${theme}`}>
-                <a href="#about-me" onClick={scrollToSection}><i className="fas fa-chevron-down"></i></a>
-            </div>
-            {/* About Section */}
-            <section className={`about ${theme}`} id="about-me">
-                <div className="about-content">
+        <div className={`about-page ${theme}`}>
+            <button onClick={toggleTheme} className="theme-toggle-btn">
+                Toggle Theme
+            </button>
+
+            <section className="landing-section">
+                <h1>Welcome to My Portfolio</h1>
+                <p>I am Pedro Ascensão, a Computer Engineering student with a passion for technology and innovation.</p>
+                <p>Explore my journey, skills, and projects. Click the button below to download my CV.</p>
+                <a href="/path/to/your/cv.pdf" download className="download-btn">Download CV</a>
+            </section>
+
+            <section className="section" id="about">
+                <img src="/path/to/about-image.jpg" alt="About Me" className="section-image" />
+                <div className="section-content">
                     <h2>About Me</h2>
-                    <p>I am a Computer Engineering student and am currently studying a Master's degree at the University of Coimbra (UC).</p>
-                    <p>I have a strong interest in a wide variety of programming languages and technologies, with a focus on software applications and web and backend development.</p>
-                    <p>I am eager for knowledge and that is why I always strive to continually encourage my learning and my ability to solve problems allows me to quickly adapt to new technologies and face more complex challenges.</p>
-                    {/* Logos Section */}
-                    <div className="logos">
-                        <img src={cisuc} alt="CISUC Logo" className="logo" />
-                        <img src={uc} alt="UC Logo" className="logo" />
-                    </div>
+                    <p>I am a Computer Engineering student currently pursuing a Master's degree at the University of Coimbra...</p>
                 </div>
             </section>
-            {/* Discover Section */}
-            <section className={`discover ${theme}`}>
-                <Link to="/about" className="discover-btn">Get to know me</Link>
-            </section>
-            <Footer theme={theme} />
+
+            {/* Additional sections... */}
         </div>
     );
 }
 
-export default Home;
+export default About;

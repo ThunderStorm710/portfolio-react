@@ -1,30 +1,26 @@
 import React from 'react';
 import './Footer.css';
 
-function Footer({ theme }) {
-    const currentYear = new Date().getFullYear();
-    const iconColor = theme === 'light' ? 'deepskyblue' : 'greenyellow';
-
+function Footer({theme}) {
     return (
-        <footer className={`footer ${theme}`}>
-            <div className="footer-content">
-                <div className="footer-icons">
-                    <button className="icon-btn" style={{ color: iconColor }}>
-                        <i className="fas fa-comment"></i>
-                    </button>
-                    <button className="icon-btn" style={{ color: iconColor }}>
-                        <i className="fas fa-university"></i>
-                    </button>
-                    <button className="icon-btn" style={{ color: iconColor }}>
-                        <i className="fas fa-wifi"></i>
-                    </button>
-                    <button className="icon-btn" style={{ color: iconColor }}>
-                        <i className="fas fa-podcast"></i>
-                    </button>
-                </div>
 
-                <div className={`footer-text ${theme === 'light' ? 'text-deepskyblue' : 'text-greenyellow'}`}>
-                    © {currentYear} — <strong>All Rights Reserved.</strong>
+        <footer className={`footer ${theme}`}>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+            <div className="footer-content">
+                <div className="footer-text">
+                    © 2024 All rights reserved.
+                </div>
+                <div className="footer-icons">
+                    <a href="https://facebook.com" className={`text-${theme}`}>
+                        <i className="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://linkedin.com" className={`text-${theme}`}>
+                        <i className="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/ThunderStorm710" className={`text-${theme}`}>
+                        <i className="fab fa-github"></i>
+                    </a>
                 </div>
             </div>
         </footer>

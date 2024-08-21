@@ -24,6 +24,7 @@ function Navbar({ theme, toggleTheme }) {
                 </li>
             </ul>
             <button className="theme-toggle" onClick={toggleTheme}>
+                <FontAwesomeIcon icon={theme === 'light' ? faSun : faMoon}/>
             </button>
         </nav>
     );

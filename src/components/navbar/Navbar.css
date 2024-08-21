@@ -8,14 +8,13 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     align-content: center;
-    padding-left: 20px;
+    padding-left: 5rem;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
     width: 100%;
     position: absolute;
     z-index: 100;
@@ -29,18 +28,11 @@ body {
     gap: 20px;
 }
 
-
-
-
-/* Adjust layout for mobile view */
 .mobile-menu-toggle {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        padding: 10px 15px;
-    }
 
     .nav-links {
         position: absolute;
@@ -78,7 +70,6 @@ body {
 
     .theme-toggle {
         margin-left: auto;
-
     }
 }
 
@@ -94,6 +85,10 @@ body {
 
 .navbar.light .nav-links a:hover::before {
     border-color: deepskyblue;
+}
+
+.navbar.light .theme-toggle {
+    color: deepskyblue;
 }
 
 .navbar.light .theme-toggle i {
@@ -114,6 +109,10 @@ body {
     border-color: greenyellow;
 }
 
+.navbar.dark .theme-toggle {
+    color: greenyellow;
+}
+
 .navbar.dark .theme-toggle i {
     color: greenyellow;
 }
@@ -121,9 +120,9 @@ body {
 /* Navbar Links */
 .nav-links a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 15px;
     position: relative;
     transition: color 0.5s ease, border-color 0.5s ease;
 }
@@ -145,6 +144,7 @@ body {
 .nav-links a:hover::before {
     opacity: 1;
 }
+
 
 /* Theme Toggle Button */
 .theme-toggle {

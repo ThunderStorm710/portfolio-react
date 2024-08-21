@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../../components/navbar/Navbar';
-import Footer from '../../components/footer/Footer';
 import cisuc from '../../assets/CISUC.png';
 import uc from '../../assets/UC.png';
 import './Landing.css';
@@ -18,7 +16,7 @@ function Home({ theme }) {
                 <div className="hero-content">
                     <h1>Hello,</h1>
                     <h2>I'm Pedro Ascensão</h2>
-                    <p>Web Designer & Developer</p>
+                    <p>Backend Developer & DevOps</p>
                     <Link to="/contact" className="btn">Contact Me</Link>
                 </div>
                 <img src={require('../../assets/person.webp')} alt="Person" className="hero-image" />

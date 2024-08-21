@@ -2,10 +2,8 @@
 .hero {
     position: relative;
     display: flex;
-    flex-direction: column; /* Alinha itens em coluna para telas menores */
     justify-content: center;
     align-items: center;
-    padding: 50px 20px; /* Reduzido para melhor ajuste em telas menores */
     min-height: 100vh;
     box-sizing: border-box;
     transition: background-color 0.5s ease, color 0.5s ease;
@@ -97,7 +95,6 @@
 /* Logos Section */
 .logos {
     display: flex;
-    flex-wrap: wrap; /* Permite que os logos quebrem linha em telas menores */
     justify-content: center;
     gap: 15px; /* Reduzido para melhor ajuste em telas menores */
     margin-top: 20px; /* Reduzido para melhor ajuste em telas menores */
@@ -130,4 +127,14 @@
 .discover-btn:hover {
     background-color: #000;
     color: #f0c040;
+}
+
+@media (max-width: 768px) {
+    .logos {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os logos quebrem linha em telas menores */
+        justify-content: center;
+        gap: 15px; /* Reduzido para melhor ajuste em telas menores */
+        margin-top: 20px; /* Reduzido para melhor ajuste em telas menores */
+    }
 }
