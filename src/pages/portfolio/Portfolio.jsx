@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './About.css';
+import './Portfolio.css';
 import merit from "../../assets/Merit-awards.jpg"
 import lei from "../../assets/dei.png"
 import mei from "../../assets/mei.png"

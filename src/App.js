@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Home from './pages/landing/Landing'; // Supondo que você tenha uma página Home
 import About from './pages/about/About'; // Supondo que você tenha uma página About
-import './App.css';
+import Portfolio from "./pages/portfolio/Portfolio";
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home theme={theme} />} />
             <Route path="/about" element={<About theme={theme} />} />
-            <Route path="/portfolio" element={<About theme={theme} />} />
+            <Route path="/portfolio" element={<Portfolio theme={theme} />} />
           </Routes>
           <Footer theme={theme} />
         </Router>

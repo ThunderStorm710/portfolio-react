@@ -6,6 +6,7 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 
 function Navbar({ theme, toggleTheme }) {
+
     return (
         <nav className={`navbar ${theme}`}>
             <div className="logo">Pedro Ascensão</div>

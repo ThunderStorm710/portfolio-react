@@ -11,11 +11,10 @@ const Landing = () => {
                     <h1>Hello,</h1>
                     <h2>I'm Pedro Ascensão</h2>
                     <p>Backend Developer & DevOps</p>
-                    <a href="#about" className="btn">Learn More</a> {/* Atualizado */}
+                    <a href="#about" className="btn">Learn More</a>
                 </div>
             </section>
 
-            {/* Separador */}
             <div className="separator"></div>
 
             <section id="about" className="about">

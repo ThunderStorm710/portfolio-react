@@ -59,15 +59,7 @@ html {
     transition: color 0.5s ease;
 }
 
-.arrow-down.light {
-    color: black;
-}
 
-.arrow-down.dark {
-    color: #fff;
-}
-
-/* About Section */
 .about {
     padding: 50px 20px; /* Reduzido para melhor ajuste em telas menores */
     text-align: center;
