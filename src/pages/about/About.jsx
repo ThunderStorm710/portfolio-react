@@ -33,6 +33,8 @@ function About() {
         sections.forEach(section => {
             observer.observe(section);
         });
+        document.title = "About me";
+
     }, []);
 
     return (

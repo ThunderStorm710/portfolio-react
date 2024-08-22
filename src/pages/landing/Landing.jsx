@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Landing.css';
 import uc from "../../assets/UC.png";
 import cisuc from "../../assets/CISUC.png";
 
 const Landing = () => {
+    useEffect(() => {
+        // Atualizar o título da página
+        document.title = "Home";
+    }, []);
+
     return (
         <div>
             <section className="hero">

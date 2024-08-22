@@ -137,13 +137,3 @@
 .section:nth-child(odd) {
     flex-direction: row-reverse;
 }
-
-.section-image.mei {
-    width: 20%;
-    height: auto;
-}
-
-.section-image.lei {
-    width: 10%;
-    height: auto;
-}

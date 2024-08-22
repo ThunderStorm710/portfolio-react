@@ -1,11 +1,15 @@
 import React, {useEffect} from 'react';
 import './Portfolio.css';
-import n3e from "../../assets/N3E.png"
+import n3e from "../../assets/n3e.PNG"
 import django_react from "../../assets/django-react.avif"
-import power from "../../assets/power.png"
-import oreos from "../../assets/oreos.jpg"
-import tutor from "../../assets/tutor.webp"
-import linguas from "../../assets/linguas.jpg"
+import jogo from "../../assets/jogo.png"
+import googol from "../../assets/googol.jpg"
+import assignment1 from "../../assets/assignment1.PNG"
+import assignment2 from "../../assets/assignment2.PNG"
+import assignment3 from "../../assets/assignment3.PNG"
+import is_assignment2 from "../../assets/is-assignment2.PNG"
+import is_assignment1 from "../../assets/is-assignment1.png"
+import es1 from "../../assets/es1.PNG"
 
 function Portfolio() {
 
@@ -31,6 +35,8 @@ function Portfolio() {
         sections.forEach(section => {
             observer.observe(section);
         });
+        document.title = "Portfolio";
+
     }, []);
 
     return (
@@ -60,7 +66,7 @@ function Portfolio() {
             </section>
 
             <section className="section" id="about">
-                <img src={n3e} alt="About Me" className="section-image mei"/>
+                <img src={n3e} alt="About Me" className="section-image"/>
                 <div className="section-content">
                     <h2>N3E Website</h2>
                     <h3>Software Engineering</h3>
@@ -76,7 +82,7 @@ function Portfolio() {
             </section>
 
             <section className="section" id="about">
-                <img src="" alt="About Me" className="section-image lei"/>
+                <img src={es1} alt="About Me" className="section-image"/>
                 <div className="section-content">
                     <h2>ClinicPlus</h2>
                     <p>Apply service design techniques to model a service, and in doing so:</p>
@@ -98,13 +104,14 @@ function Portfolio() {
                                 <li>Lambda Functions</li>
                                 <li>Dynamo DB</li>
                                 <li>RDS - PostgreSQL</li>
+                                <li>Elastic Beanstalk</li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             </section>
             <section className="section" id="about">
-                <img src="" alt="About Me" className="section-image"/>
+                <img src={googol} alt="About Me" className="section-image"/>
                 <div className="section-content">
                     <h2>Googol: Web Page Search Engine</h2>
                     <p>The project aims to create a web page search engine with functionalities similar to services like
@@ -128,7 +135,7 @@ function Portfolio() {
                 </div>
             </section>
             <section className="section" id="about">
-                <img src={power} alt="About Me" className="section-image"/>
+                <img src={is_assignment1} alt="About Me" className="section-image"/>
                 <div className="section-content">
                     <h2>WebFlux-Based Web Application Development</h2>
                     <p>In this project, a web application was developed using the WebFlux framework, which is part of Spring Boot. The focus was on creating reactive applications, both on the server and client sides. The server exposed web services that allowed CRUD operations on data entities like Pet and Owner. The client application consumed these services and performed a series of queries to process and analyze the data in a non-blocking, reactive manner.</p>
@@ -144,7 +151,7 @@ function Portfolio() {
             </section>
 
             <section className="section" id="about">
-                <img src={oreos} alt="About Me" className="section-image"/>
+                <img src={is_assignment2} alt="About Me" className="section-image"/>
                 <div className="section-content">
                     <h2> Kafka Streams-Based E-Commerce Analytics</h2>
                     <p>This project involved creating a series of standalone applications to simulate an e-commerce environment, focusing on real-time data processing using Apache Kafka and Kafka Streams. The system was designed to handle streams of data related to sales and purchases of products (socks, in this case). The goal was to compute various metrics such as revenue, expenses, and profit, and then store the results back in a database.</p>
@@ -160,7 +167,7 @@ function Portfolio() {
                 </div>
             </section>
             <section className="section" id="about">
-                <img src={tutor} alt="About Me" className="section-image"/>
+                <img src={jogo} alt="About Me" className="section-image"/>
                 <div className="section-content">
                     <h2>2D Game -> Shades of Void</h2>
                     <p>2D game where players navigate through multiple levels across three different worlds. The player
@@ -175,7 +182,7 @@ function Portfolio() {
                 </div>
             </section>
             <section className="section" id="about">
-                <img src={linguas} alt="About Me" className="section-image"/>
+                <img src={assignment1} alt="About Me" className="section-image"/>
                 <div className="section-content">
                     <h2>VPN Configuration and Two-Factor Authentication</h2>
                     <p>This project involved configuring a secure VPN tunnel in a "road warrior" scenario, where remote
@@ -196,7 +203,7 @@ function Portfolio() {
                 </div>
             </section>
             <section className="section" id="about">
-                <img src={linguas} alt="About Me" className="section-image"/>
+                <img src={assignment2} alt="About Me" className="section-image"/>
                 <div className="section-content">
                     <h2>Network Firewall and Intrusion Detection</h2>
                     <p>This project focused on configuring a network firewall using IPTables/Netfilter to protect a
@@ -212,7 +219,7 @@ function Portfolio() {
                 </div>
             </section>
             <section className="section" id="about">
-                <img src={linguas} alt="About Me" className="section-image"/>
+                <img src={assignment3} alt="About Me" className="section-image"/>
                 <div className="section-content">
                     <h2>Web Security Testing and Firewall Configuration</h2>
                     <p>This assignment was split into two phases: the first involved performing security testing on a
