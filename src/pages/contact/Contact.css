@@ -1,3 +1,4 @@
+/* Estilo base para a página de contato */
 .contact-page {
     display: flex;
     justify-content: center;
@@ -17,7 +18,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Escurece a imagem de fundo */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -28,15 +29,13 @@
     border-radius: 8px;
     overflow: hidden;
     z-index: 2;
+    flex-direction: row; /* Layout padrão para telas maiores */
 }
 
-.contact-info {
+.contact-info,
+.contact-form-container {
     flex: 1;
     padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 .contact-info h2 {
@@ -62,16 +61,8 @@
     font-size: 1.5rem;
 }
 
-
-
-.contact-form-container {
-    flex: 1;
-    padding: 40px;
-}
-
 .contact-form .form-group {
     margin-bottom: 20px;
-
 }
 
 .contact-form label {
@@ -107,17 +98,53 @@
     transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
-
-}
-
+/* Ajustes para telas menores que 768px */
 @media (max-width: 768px) {
     .contact-container {
-        flex-direction: column;
+        flex-direction: column; /* Coloca a imagem acima do texto */
+        padding: 20px;
     }
 
     .contact-info,
     .contact-form-container {
         padding: 20px;
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    .contact-info li,
+    .contact-form .form-group {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+}
+
+/* Ajustes específicos para telas menores que 400px */
+@media (max-width: 400px) {
+    .contact-container {
+        padding: 10px;
+    }
+
+    .contact-info,
+    .contact-form-container {
+        padding: 10px;
+        text-align: justify; /* Justifica o texto para melhorar a leitura */
+    }
+
+    .contact-info h2 {
+        font-size: 1.2rem; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .contact-info li,
+    .contact-form .form-group {
+        font-size: 0.875rem; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 15px; /* Reduz o espaçamento entre elementos */
+    }
+
+    .submit-btn {
+        font-size: 1rem; /* Ajusta o tamanho do botão */
+        padding: 10px; /* Reduz o padding do botão */
     }
 }
