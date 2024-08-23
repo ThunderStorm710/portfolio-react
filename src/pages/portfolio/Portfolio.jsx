@@ -14,7 +14,8 @@ import es1 from "../../assets/es1.PNG"
 function Portfolio() {
 
     useEffect(() => {
-        const sections = document.querySelectorAll('.section');
+        const sections = document.querySelectorAll('.portfolio-section');
+        console.log(sections);
 
         const options = {
             root: null,
@@ -40,19 +41,19 @@ function Portfolio() {
     }, []);
 
     return (
-        <div className={`about-page`}>
-            <section className="landing-section">
+        <div className={`portfolio-page`}>
+            <section className="landing-portfolio-section">
                 <div className="overlay"></div>
                 <h1>Portfolio</h1>
                 <p>On this page you can find all the projects I have completed to date!</p>
                 <p>Looking forward to the next one!</p>
                 <a href="https://drive.google.com/file/d/1C1nCXdLMTtenBOZzlHRiRoLGwaaDUxq2/view?usp=sharing" download
-                   className="download-btn">Download CV</a>
+                   className="portfolio-btn">Download CV</a>
             </section>
 
-            <section className="section" id="about">
-                <img src={django_react} alt="About Me" className="section-image"/>
-                <div className="section-content">
+            <section className="portfolio-section" id="portfolio">
+                <img src={django_react} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
                     <h2>Quiz management application - MoelasWare</h2>
                     <p>Developed as a project for the Software Engineering discipline, integrated into the 2020-2021
                         Degree in Computer
@@ -65,9 +66,9 @@ function Portfolio() {
                 </div>
             </section>
 
-            <section className="section" id="about">
-                <img src={n3e} alt="About Me" className="section-image"/>
-                <div className="section-content">
+            <section className="portfolio-section" id="portfolio">
+                <img src={n3e} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
                     <h2>N3E Website</h2>
                     <h3>Software Engineering</h3>
                     <h3>Link to the website can be found <a href="https://n3e.vercel.app">here</a></h3>
@@ -81,9 +82,9 @@ function Portfolio() {
                 </div>
             </section>
 
-            <section className="section" id="about">
-                <img src={es1} alt="About Me" className="section-image"/>
-                <div className="section-content">
+            <section className="portfolio-section" id="portfolio">
+                <img src={es1} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
                     <h2>ClinicPlus</h2>
                     <p>Apply service design techniques to model a service, and in doing so:</p>
                     <ul>
@@ -110,9 +111,9 @@ function Portfolio() {
                     </ul>
                 </div>
             </section>
-            <section className="section" id="about">
-                <img src={googol} alt="About Me" className="section-image"/>
-                <div className="section-content">
+            <section className="portfolio-section" id="portfolio">
+                <img src={googol} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
                     <h2>Googol: Web Page Search Engine</h2>
                     <p>The project aims to create a web page search engine with functionalities similar to services like
                         Google.com, Bing.com, and DuckDuckGo.com. The system includes automatic indexing (Web crawler)
@@ -134,9 +135,9 @@ function Portfolio() {
                     </ul>
                 </div>
             </section>
-            <section className="section" id="about">
-                <img src={is_assignment1} alt="About Me" className="section-image"/>
-                <div className="section-content">
+            <section className="portfolio-section" id="portfolio">
+                <img src={is_assignment1} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
                     <h2>WebFlux-Based Web Application Development</h2>
                     <p>In this project, a web application was developed using the WebFlux framework, which is part of Spring Boot. The focus was on creating reactive applications, both on the server and client sides. The server exposed web services that allowed CRUD operations on data entities like Pet and Owner. The client application consumed these services and performed a series of queries to process and analyze the data in a non-blocking, reactive manner.</p>
                     <ul>
@@ -150,9 +151,9 @@ function Portfolio() {
                 </div>
             </section>
 
-            <section className="section" id="about">
-                <img src={is_assignment2} alt="About Me" className="section-image"/>
-                <div className="section-content">
+            <section className="portfolio-section" id="portfolio">
+                <img src={is_assignment2} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
                     <h2> Kafka Streams-Based E-Commerce Analytics</h2>
                     <p>This project involved creating a series of standalone applications to simulate an e-commerce environment, focusing on real-time data processing using Apache Kafka and Kafka Streams. The system was designed to handle streams of data related to sales and purchases of products (socks, in this case). The goal was to compute various metrics such as revenue, expenses, and profit, and then store the results back in a database.</p>
                     <ul>
@@ -166,9 +167,9 @@ function Portfolio() {
                     </ul>
                 </div>
             </section>
-            <section className="section" id="about">
-                <img src={jogo} alt="About Me" className="section-image"/>
-                <div className="section-content">
+            <section className="portfolio-section" id="portfolio">
+                <img src={jogo} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
                     <h2>2D Game -> Shades of Void</h2>
                     <p>2D game where players navigate through multiple levels across three different worlds. The player
                         can switch between worlds to overcome obstacles that may block progress in one world by
@@ -181,9 +182,9 @@ function Portfolio() {
                     </ul>
                 </div>
             </section>
-            <section className="section" id="about">
-                <img src={assignment1} alt="About Me" className="section-image"/>
-                <div className="section-content">
+            <section className="portfolio-section" id="portfolio">
+                <img src={assignment1} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
                     <h2>VPN Configuration and Two-Factor Authentication</h2>
                     <p>This project involved configuring a secure VPN tunnel in a "road warrior" scenario, where remote
                         clients access services on an internal network through a VPN gateway. The assignment focused on
@@ -202,9 +203,9 @@ function Portfolio() {
                     </ul>
                 </div>
             </section>
-            <section className="section" id="about">
-                <img src={assignment2} alt="About Me" className="section-image"/>
-                <div className="section-content">
+            <section className="portfolio-section" id="portfolio">
+                <img src={assignment2} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
                     <h2>Network Firewall and Intrusion Detection</h2>
                     <p>This project focused on configuring a network firewall using IPTables/Netfilter to protect a
                         network environment, including filtering and NAT. Additionally, Suricata was configured as an
@@ -218,9 +219,9 @@ function Portfolio() {
                     </ul>
                 </div>
             </section>
-            <section className="section" id="about">
-                <img src={assignment3} alt="About Me" className="section-image"/>
-                <div className="section-content">
+            <section className="portfolio-section" id="portfolio">
+                <img src={assignment3} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
                     <h2>Web Security Testing and Firewall Configuration</h2>
                     <p>This assignment was split into two phases: the first involved performing security testing on a
                         web application (OWASP JuiceShop) using tools like Kali Linux and OWASP ZAP, following the Web

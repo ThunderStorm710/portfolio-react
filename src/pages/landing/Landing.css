@@ -101,6 +101,7 @@ html {
 /* Discover Section */
 .discover {
     padding: 30px 20px; /* Reduzido para melhor ajuste em telas menores */
+    margin-bottom: 5rem;
     text-align: center;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -114,6 +115,7 @@ html {
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.5s ease;
+
 }
 
 .discover-btn:hover {
@@ -130,15 +132,82 @@ html {
 }
 
 
+/* Hero Section */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column; /* Imagem em cima e texto embaixo */
+        padding: 10px; /* Reduzir padding para telas menores */
     }
 
-    .hero-content {
-        margin-left: 0; /* Remove a margem esquerda */
-        margin-top: 20px; /* Adiciona espaço entre a imagem e o texto */
+    .hero-content h1 {
+        font-size: 2rem; /* Diminui o tamanho do título */
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem; /* Diminui o tamanho do subtítulo */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Diminui o tamanho do parágrafo */
+        margin-bottom: 20px; /* Reduzir o espaço inferior */
+    }
+
+    .hero-content .btn {
+        padding: 8px 16px; /* Reduz o tamanho do botão */
+        font-size: 0.875rem; /* Ajusta o tamanho da fonte do botão */
+    }
+
+    .arrow-down {
+        font-size: 1.5rem; /* Diminui o tamanho da seta */
+    }
+
+
+/* About Section */
+
+    .about {
+        padding: 20px 10px; /* Reduz o padding */
+        height: auto; /* Permite que a altura seja determinada pelo conteúdo */
+    }
+
+    .about-content {
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+        line-height: 1.5rem; /* Ajusta o espaçamento entre linhas */
+    }
+
+    .about-content h2 {
+        font-size: 2rem; /* Diminui o tamanho do título */
+    }
+
+    .about-content p {
+        font-size: 1.25rem; /* Diminui o tamanho dos parágrafos */
+        line-height: 1.75rem; /* Ajusta o espaçamento entre linhas */
+    }
+
+
+/* Logos Section */
+
+    .logos {
+        flex-direction: column; /* Alinha os logos verticalmente */
+        gap: 10px; /* Espaçamento entre os logos */
+    }
+
+    .logo {
+        height: 60px; /* Diminui o tamanho dos logos */
+    }
+
+
+/* Discover Section */
+
+    .discover {
+        padding: 20px 10px; /* Reduz o padding */
+        margin-bottom: 2rem; /* Diminui o espaço inferior */
+    }
+
+    .discover-btn {
+        padding: 8px 16px; /* Reduz o tamanho do botão */
+        font-size: 0.875rem; /* Ajusta o tamanho da fonte do botão */
     }
 }
+
 
 

@@ -22,8 +22,25 @@
     color: white;
     background-color: deepskyblue;
 }
+.light .portfolio-btn {
+    color: white;
+    background-color: deepskyblue;
+}
+
+.light .download-btn {
+    color: white;
+    background-color: deepskyblue;
+}
 
 .light .submit-btn:hover {
+    color: deepskyblue;
+    background-color: white;
+}
+.light .portfolio-btn:hover {
+    color: deepskyblue;
+    background-color: white;
+}
+.light .download-btn:hover {
     color: deepskyblue;
     background-color: white;
 }
@@ -35,6 +52,16 @@
 .light .contact-container {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: rgba(255, 255, 255, 1);
+}
+
+.light .portfolio-page{
+    color: white;
+    background-color: deepskyblue;
+}
+
+.light .about-page{
+    color: white;
+    background-color: deepskyblue;
 }
 
 .dark {
@@ -63,10 +90,41 @@
     background-color: #f0c040;
 }
 
+.dark .portfolio-btn {
+    color: black;
+    background-color: #f0c040;
+}
+
+.dark .download-btn {
+    color: black;
+    background-color: #f0c040;
+}
+
 .dark .submit-btn:hover {
     color: #f0c040;
     background-color: black;
 
+}
+.dark .portfolio-btn:hover {
+    color: #f0c040;
+    background-color: black;
+
+}
+
+.dark .download-btn:hover {
+    color: #f0c040;
+    background-color: black;
+
+}
+
+.dark .portfolio-page{
+    background-color: #f0c040; /* Fundo de destaque semelhante ao Landing */
+    color: black; /* Cor do texto para manter o contraste */
+}
+
+.dark .about-page{
+    background-color: #f0c040; /* Fundo de destaque semelhante ao Landing */
+    color: black; /* Cor do texto para manter o contraste */
 }
 
 .dark .contact-info {

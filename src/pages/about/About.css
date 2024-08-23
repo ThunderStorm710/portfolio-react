@@ -1,7 +1,5 @@
 .about-page {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0c040; /* Fundo de destaque semelhante ao Landing */
-    color: black; /* Cor do texto para manter o contraste */
     transition: background-color 0.5s ease, color 0.5s ease; /* Transições suaves */
 }
 
@@ -50,21 +48,12 @@
 }
 
 .download-btn {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: white;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px 20px; /* Ajustado para tamanhos menores */
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    position: relative;
-    z-index: 2;
-}
-
-.download-btn:hover {
-    background-color: #0056b3;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
 }
 
 .section {
@@ -97,7 +86,7 @@
 }
 
 .section-content {
-    width: 60%;
+    width: 100%;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -147,3 +136,111 @@
     width: 10%;
     height: auto;
 }
+/* Ajustes específicos para telas menores que 400px */
+/* Ajustes para telas menores que 400px */
+@media (max-width: 400px) {
+    .section {
+        display: flex;
+        flex-direction: column; /* Alinha os elementos verticalmente */
+        align-items: center; /* Centraliza os elementos */
+        text-align: center;
+        padding: 15px; /* Padding para um espaço confortável */
+        margin: 10px 0; /* Margem entre as seções */
+        box-shadow: none; /* Remove sombras para simplicidade */
+    }
+
+    .section-image {
+        width: 80%; /* Reduz a largura da imagem para caber melhor na tela */
+        height: auto; /* Mantém a proporção da imagem */
+        margin-bottom: 15px; /* Espaçamento inferior para separar da próxima seção */
+        margin-right: 0;
+        border-radius: 10px; /* Adiciona cantos arredondados */
+    }
+
+    .section-content {
+        width: 100%; /* O conteúdo ocupa toda a largura disponível */
+        padding: 0; /* Remove o padding interno para evitar overflow */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .section h2 {
+        font-size: 1.5rem; /* Ajusta o tamanho do título */
+        margin-bottom: 10px; /* Reduz o espaço abaixo do título */
+    }
+
+    .section p, .section ul {
+        font-size: 0.875rem; /* Tamanho de fonte adequado para leitura */
+        line-height: 1.4rem; /* Ajusta o espaçamento entre linhas */
+        margin-bottom: 10px; /* Espaçamento inferior reduzido */
+        text-align: left; /* Mantém o texto alinhado à esquerda para listas */
+    }
+
+    .section ul {
+        padding-left: 20px; /* Ajusta o padding da lista */
+    }
+
+    .download-btn {
+        padding: 8px 16px; /* Tamanho do botão adequado para telas pequenas */
+        font-size: 1rem; /* Ajusta o tamanho da fonte do botão */
+        text-align: center; /* Centraliza o texto no botão */
+    }
+}
+/* Ajustes gerais para telas menores */
+@media (max-width: 768px) {
+    .landing-section {
+        height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+        padding: 20px; /* Reduz o padding */
+        background-size: cover; /* Mantém a imagem de fundo */
+    }
+
+    .landing-section h1 {
+        font-size: 2.5rem; /* Diminui o tamanho do título */
+    }
+
+    .landing-section p {
+        font-size: 1rem; /* Diminui o tamanho do texto */
+        margin-bottom: 20px; /* Reduz o espaço inferior */
+    }
+
+    .download-btn {
+        padding: 8px 16px; /* Reduz o tamanho do botão */
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .section {
+        flex-direction: column; /* Alinha os elementos verticalmente */
+        text-align: center; /* Centraliza o texto */
+        padding: 15px; /* Reduz o padding */
+        margin: 20px 0; /* Reduz o espaço entre as secções */
+    }
+
+    .section-image {
+        width: 80%; /* Ajusta a largura da imagem para telas menores */
+        margin: 0 auto 20px; /* Centraliza a imagem e adiciona margem inferior */
+    }
+
+    .section-content {
+        width: 100%; /* Ocupa toda a largura disponível */
+        padding: 0; /* Remove o padding para evitar overflow */
+        box-shadow: none; /* Remove a sombra para um visual mais limpo */
+    }
+
+    .section h2 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+        margin-bottom: 15px; /* Reduz o espaço inferior */
+    }
+
+    .section h3 {
+        font-size: 1rem; /* Ajusta o tamanho do subtítulo */
+    }
+
+    .section p, .section ul {
+        font-size: 1rem; /* Reduz o tamanho do texto */
+        line-height: 1.5rem; /* Ajusta o espaçamento entre linhas */
+    }
+
+}
+
+
+
+

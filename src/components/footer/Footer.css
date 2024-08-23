@@ -78,20 +78,28 @@
 }
 
 /* Adjust layout for mobile view */
+/* Adjust layout for mobile view */
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 30px;
     }
 
     .footer-content {
         flex-direction: column;
         gap: 20px;
+        width: 100%; /* Garante que o conteúdo ocupe toda a largura */
     }
 
     .footer-icons {
         justify-content: center;
+        gap: 20px; /* Ajusta o espaço entre ícones para telas menores */
+        font-size: 2.5rem; /* Diminui o tamanho dos ícones para telas menores */
+    }
+
+    .footer-text {
+        font-size: 1rem; /* Diminui o tamanho do texto para melhor leitura em telas menores */
+        margin-top: 10px; /* Adiciona espaçamento entre ícones e texto */
     }
 }

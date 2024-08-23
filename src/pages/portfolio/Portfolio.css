@@ -1,17 +1,14 @@
-.about-page {
+.portfolio-page {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0c040; /* Fundo de destaque semelhante ao Landing */
-    color: black; /* Cor do texto para manter o contraste */
     transition: background-color 0.5s ease, color 0.5s ease; /* Transições suaves */
 }
 
 
-.section {
+.portfolio-section {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-
-.landing-section {
+.landing-portfolio-section {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -24,7 +21,7 @@
     color: white;
 }
 
-.landing-section .overlay {
+.landing-portfolio-section .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -32,27 +29,25 @@
     z-index: 1;
 }
 
-.landing-section h1 {
+.landing-portfolio-section h1 {
     font-size: 4rem;
     margin-bottom: 20px;
 }
 
-.landing-section p {
+.landing-portfolio-section p {
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
 
-.landing-section h1,
-.landing-section p,
-.landing-section .download-btn {
+.landing-portfolio-section h1,
+.landing-portfolio-section p,
+.landing-portfolio-section .portfolio-btn {
     position: relative;
     z-index: 2;
 }
 
-.download-btn {
+.landing-portfolio-section .portfolio-btn {
     padding: 10px 20px; /* Ajustado para tamanhos menores */
-    background-color: #f0c040;
-    color: #000;
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
@@ -60,11 +55,10 @@
     transition: background-color 0.5s ease;
 }
 
-.download-btn:hover {
-    color: #f0c040;
-    background-color: black;}
+.landing-portfolio-section .portfolio-btn:hover {
+}
 
-.section {
+.portfolio-section {
     display: flex;
     align-items: center;
     opacity: 0;
@@ -78,12 +72,12 @@
     color: #000; /* Texto escuro */
 }
 
-.section.visible {
+.portfolio-section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.section-image {
+.portfolio-section-image {
     width: 40%;
     height: auto;
     border-radius: 10px;
@@ -93,27 +87,27 @@
     border: 2px solid #ddd;
 }
 
-.section-content {
-    width: 60%;
+.portfolio-section-content {
+    width: 100%;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.section h2 {
+.portfolio-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-.section h3 {
+.portfolio-section h3 {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
 }
 
-.section a {
+.portfolio-section a {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -121,16 +115,87 @@
     text-decoration: none;
 }
 
-.section a:hover {
+.portfolio-section a:hover {
     color: #000; /* Inverter cores no hover */
 }
 
-.section p, .section ul {
+.portfolio-section p, .portfolio-section ul {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #555;
 }
 
-.section:nth-child(odd) {
+.portfolio-section:nth-child(odd) {
     flex-direction: row-reverse;
 }
+/* Ajustes específicos para telas menores que 400px */
+
+@media (max-width: 768px) {
+
+    .portfolio-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .portfolio-section-image {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .portfolio-section-content {
+        width: 100%;
+        padding: 0;
+        text-align: left; /* Ajustar para melhor leitura em dispositivos móveis */
+    }
+
+    .portfolio-section h2 {
+        font-size: 2rem;
+    }
+
+    .portfolio-section p, .portfolio-section ul {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .portfolio-section:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+    .portfolio-section {
+        padding: 10px;
+        margin: 10px 0;
+        box-shadow: none;
+        flex-direction: column; /* Garantir que as imagens apareçam acima do texto */
+    }
+
+    .portfolio-section-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        order: -1; /* Mover a imagem para o topo da secção */
+    }
+
+    .portfolio-section-content {
+        width: 100%;
+        padding: 0;
+        text-align: justify;
+    }
+
+    .portfolio-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-section p, .portfolio-section ul {
+        font-size: 0.875rem;
+        line-height: 1.4rem;
+    }
+
+    .portfolio-section ul {
+        padding-left: 20px;
+    }
+}
+
