@@ -19,13 +19,13 @@
 }
 
 .light .submit-btn {
-    color: deepskyblue;
-    background-color: white;
+    color: white;
+    background-color: deepskyblue;
 }
 
 .light .submit-btn:hover {
-    color: white;
-    background-color: deepskyblue;
+    color: deepskyblue;
+    background-color: white;
 }
 
 .light .contact-info {
@@ -59,13 +59,14 @@
 }
 
 .dark .submit-btn {
-    color: #f0c040;
-    background-color: black;
+    color: black;
+    background-color: #f0c040;
 }
 
 .dark .submit-btn:hover {
-    color: black;
-    background-color: #f0c040;
+    color: #f0c040;
+    background-color: black;
+
 }
 
 .dark .contact-info {
