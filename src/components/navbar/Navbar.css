@@ -98,23 +98,23 @@ body {
 /* Dark Theme */
 .navbar.dark {
     background-color: black;
-    color: greenyellow;
+    color: #f0c040;
 }
 
 .navbar.dark .nav-links a {
-    color: greenyellow;
+    color: #f0c040;
 }
 
 .navbar.dark .nav-links a:hover::before {
-    border-color: greenyellow;
+    border-color: #f0c040;
 }
 
 .navbar.dark .theme-toggle {
-    color: greenyellow;
+    color: #f0c040;
 }
 
 .navbar.dark .theme-toggle i {
-    color: greenyellow;
+    color: #f0c040;
 }
 
 /* Navbar Links */

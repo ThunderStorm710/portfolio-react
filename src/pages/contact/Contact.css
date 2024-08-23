@@ -1,0 +1,123 @@
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../../assets/coding.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.contact-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Escurece a imagem de fundo */
+    z-index: 1;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+
+
+.contact-form-container {
+    flex: 1;
+    padding: 40px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form-container {
+        padding: 20px;
+    }
+}

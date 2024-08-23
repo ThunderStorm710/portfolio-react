@@ -1,14 +1,84 @@
 .light {
-  background-color: white;
-  color: black;
+    background-color: white;
+    color: black;
+}
+
+.light .contact-info h2,
+.light .contact-info ul,
+.light .contact-info li,
+.light .contact-info i,
+.light .contact-info a,
+.light .contact-info span,
+.light .contact-form .form-group{
+    color: deepskyblue;
+}
+
+.light .contact-form input,
+.light .contact-form textarea {
+    color: deepskyblue;
+}
+
+.light .submit-btn {
+    color: deepskyblue;
+    background-color: white;
+}
+
+.light .submit-btn:hover {
+    color: white;
+    background-color: deepskyblue;
+}
+
+.light .contact-info {
+    background-color: black;
+}
+
+.light .contact-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .dark {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
+
+.dark .contact-info h2,
+.dark .contact-info ul,
+.dark .contact-info li,
+.dark .contact-info i,
+.dark .contact-info a,
+.dark .contact-info span,
+.dark .contact-form .form-group {
+    color: #f0c040;
+}
+
+
+.dark .contact-form input,
+.dark .contact-form textarea {
+    color: #f0c040;
+}
+
+.dark .submit-btn {
+    color: #f0c040;
+    background-color: black;
+}
+
+.dark .submit-btn:hover {
+    color: black;
+    background-color: #f0c040;
+}
+
+.dark .contact-info {
+    background-color: white;
+}
+
+.dark .contact-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 1);
+}
+
 
 /* Estilos globais para transição */
 * {
-  transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }

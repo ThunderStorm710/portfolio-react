@@ -62,19 +62,19 @@
 /* Dark Theme */
 .footer.dark {
     background-color: black;
-    color: greenyellow;
+    color: #f0c040;
 }
 
-.footer.dark .text-greenyellow {
-    color: greenyellow !important;
+.footer.dark .text-#f0c040 {
+    color: #f0c040 !important;
 }
 
 .footer.dark .v-btn {
-    color: greenyellow;
+    color: #f0c040;
 }
 
 .footer.dark .footer-icons i {
-    color: greenyellow;
+    color: #f0c040;
 }
 
 /* Adjust layout for mobile view */

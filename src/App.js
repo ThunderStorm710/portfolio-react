@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer';
 import Home from './pages/landing/Landing'; // Supondo que você tenha uma página Home
 import About from './pages/about/About'; // Supondo que você tenha uma página About
 import Portfolio from "./pages/portfolio/Portfolio";
+import Contact from "./pages/contact/Contact";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<Home theme={theme} />} />
             <Route path="/about" element={<About theme={theme} />} />
             <Route path="/portfolio" element={<Portfolio theme={theme} />} />
+            <Route path="/contact" element={<Contact theme={theme} />} />
           </Routes>
           <Footer theme={theme} />
         </Router>
