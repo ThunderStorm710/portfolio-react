@@ -24,6 +24,7 @@ function Contact() {
                 },
             );
     };
+    document.title = 'Contact - Pedro Ascensão';
 
 
     return (
