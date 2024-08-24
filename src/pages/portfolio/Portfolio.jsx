@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './Portfolio.css';
 import n3e from "../../assets/n3e.PNG"
+import gec from "../../assets/gec.PNG"
 import django_react from "../../assets/django-react.avif"
 import jogo from "../../assets/jogo.png"
 import googol from "../../assets/googol.jpg"
@@ -116,6 +117,20 @@ function Portfolio() {
             </section>
 
             <section className="portfolio-section" id="portfolio">
+                <img src={gec} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
+                    <h2>GEC Website</h2>
+                    <h3>Software Engineering</h3>
+                    <h3>Link to the website can be found <a href="https://gec-tmr.vercel.app">here</a></h3>
+                    <p>Creation of a website to be used by GEC</p>
+                    <ul>
+                        <li>Backend: Python Django</li>
+                        <li>Deployment: Vercel</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className="portfolio-section" id="portfolio">
                 <img src={es1} alt="About Me" className="portfolio-section-image"/>
                 <div className="portfolio-section-content">
                     <h2>ClinicPlus</h2>
@@ -172,9 +187,13 @@ function Portfolio() {
                 <img src={is_assignment1} alt="About Me" className="portfolio-section-image"/>
                 <div className="portfolio-section-content">
                     <h2>WebFlux-Based Web Application Development</h2>
-                    <p>In this project, a web application was developed using the WebFlux framework, which is part of Spring Boot. The focus was on creating reactive applications, both on the server and client sides. The server exposed web services that allowed CRUD operations on data entities like Pet and Owner. The client application consumed these services and performed a series of queries to process and analyze the data in a non-blocking, reactive manner.</p>
+                    <p>In this project, a web application was developed using the WebFlux framework, which is part of
+                        Spring Boot. The focus was on creating reactive applications, both on the server and client
+                        sides. The server exposed web services that allowed CRUD operations on data entities like Pet
+                        and Owner. The client application consumed these services and performed a series of queries to
+                        process and analyze the data in a non-blocking, reactive manner.</p>
                     <ul>
-                    <li>Spring Boot WebFlux: For developing the reactive web services.</li>
+                        <li>Spring Boot WebFlux: For developing the reactive web services.</li>
                         <li>Reactor Core: To implement reactive streams with classes like Flux and Mono.</li>
                         <li>Docker and Docker Compose: For environment setup and containerization, including using</li>
                         <li>PostgreSQL as the database.</li>
@@ -188,11 +207,16 @@ function Portfolio() {
                 <img src={is_assignment2} alt="About Me" className="portfolio-section-image"/>
                 <div className="portfolio-section-content">
                     <h2> Kafka Streams-Based E-Commerce Analytics</h2>
-                    <p>This project involved creating a series of standalone applications to simulate an e-commerce environment, focusing on real-time data processing using Apache Kafka and Kafka Streams. The system was designed to handle streams of data related to sales and purchases of products (socks, in this case). The goal was to compute various metrics such as revenue, expenses, and profit, and then store the results back in a database.</p>
+                    <p>This project involved creating a series of standalone applications to simulate an e-commerce
+                        environment, focusing on real-time data processing using Apache Kafka and Kafka Streams. The
+                        system was designed to handle streams of data related to sales and purchases of products (socks,
+                        in this case). The goal was to compute various metrics such as revenue, expenses, and profit,
+                        and then store the results back in a database.</p>
                     <ul>
                         <li>Apache Kafka: As the messaging system to handle streams of data.</li>
                         <li> Kafka Streams: For processing data in real-time, calculating metrics, and producing results
-                            for storage.</li>
+                            for storage.
+                        </li>
                         <li>Kafka Connect: To automate the extraction and insertion of data from/to a database.</li>
                         <li> Docker and Docker Compose: For setting up the Kafka environment and related services.</li>
                         <li> Maven: For project management and building the applications.</li>
