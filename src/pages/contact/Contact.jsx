@@ -1,10 +1,30 @@
-import React, { useRef } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
 
 
 function Contact() {
+
+    const [data, setData] = useState(0);
+
+
+    useEffect(() => {
+
+        // Fazer a requisição HTTP
+        fetch('https://worker-portfolio.pascensao77.workers.dev/?pageType=contact')
+            .then(response => response.json())
+            .then(result => {
+                setData(result);
+                console.log(result); // Verificar o resultado da requisição
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
+
+    useEffect(() => {
+        console.log(data); // Verificar o valor de data após ser atualizado
+    }, [data]);
     const form = useRef();
+
 
     const sendEmail = (e) => {
         e.preventDefault();

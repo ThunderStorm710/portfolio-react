@@ -1,13 +1,29 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './Landing.css';
 import uc from "../../assets/UC.png";
 import cisuc from "../../assets/CISUC.png";
 
 const Landing = () => {
+
+    const [data, setData] = useState(0);
+
+
     useEffect(() => {
-        // Atualizar o título da página
         document.title = "Home";
+
+        // Fazer a requisição HTTP
+        fetch('https://worker-portfolio.pascensao77.workers.dev/?pageType=landing')
+            .then(response => response.json())
+            .then(result => {
+                setData(result);
+                console.log(result); // Verificar o resultado da requisição
+            })
+            .catch(error => console.error('Error fetching data:', error));
     }, []);
+
+    useEffect(() => {
+        console.log(data); // Verificar o valor de data após ser atualizado
+    }, [data]);
 
     return (
         <div>

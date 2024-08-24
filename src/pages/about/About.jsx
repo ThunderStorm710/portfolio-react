@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './About.css';
 import merit from "../../assets/Merit-awards.jpg"
 import lei from "../../assets/dei.png"
@@ -37,6 +37,40 @@ function About() {
 
     }, []);
 
+    const [data, setData] = useState(0);
+    const [cv, setCV] = useState(0);
+
+
+    useEffect(() => {
+
+        // Fazer a requisição HTTP
+        fetch('https://worker-portfolio.pascensao77.workers.dev/?pageType=about')
+            .then(response => response.json())
+            .then(result => {
+                setData(result);
+                console.log(result); // Verificar o resultado da requisição
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
+
+    useEffect(() => {
+        console.log(data); // Verificar o valor de data após ser atualizado
+    }, [data]);
+
+    const fetchData = () => {
+        fetch('https://worker-portfolio.pascensao77.workers.dev/?pageType=cv')
+            .then(response => response.json())
+            .then(result => {
+                setCV(result);
+                console.log(result); // Verificar o resultado da requisição
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    };
+
+    useEffect(() => {
+        console.log(cv); // Verificar o valor de data após ser atualizado
+    }, [cv]);
+
     return (
         <div className={`about-page`}>
             <section className="landing-section">
@@ -45,7 +79,7 @@ function About() {
                 <p>I am Pedro Ascensão, a Computer Engineering student with a passion for technology and innovation.</p>
                 <p>Explore my journey, skills, and projects</p>
                 <a href="https://drive.google.com/file/d/1C1nCXdLMTtenBOZzlHRiRoLGwaaDUxq2/view?usp=sharing" download
-                   className="download-btn">Download CV</a>
+                   className="download-btn" onClick={fetchData}>Download CV</a>
             </section>
 
             <section className="section" id="about">

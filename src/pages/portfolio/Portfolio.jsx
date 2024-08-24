@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './Portfolio.css';
 import n3e from "../../assets/n3e.PNG"
 import django_react from "../../assets/django-react.avif"
@@ -15,7 +15,6 @@ function Portfolio() {
 
     useEffect(() => {
         const sections = document.querySelectorAll('.portfolio-section');
-        console.log(sections);
 
         const options = {
             root: null,
@@ -40,6 +39,40 @@ function Portfolio() {
 
     }, []);
 
+    const [data, setData] = useState(0);
+    const [cv, setCV] = useState(0);
+
+
+    useEffect(() => {
+
+        // Fazer a requisição HTTP
+        fetch('https://worker-portfolio.pascensao77.workers.dev/?pageType=portfolio')
+            .then(response => response.json())
+            .then(result => {
+                setData(result);
+                console.log(result); // Verificar o resultado da requisição
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
+
+    useEffect(() => {
+        console.log(data); // Verificar o valor de data após ser atualizado
+    }, [data]);
+
+    const fetchData = () => {
+        fetch('https://worker-portfolio.pascensao77.workers.dev/?pageType=cv')
+            .then(response => response.json())
+            .then(result => {
+                setCV(result);
+                console.log(result); // Verificar o resultado da requisição
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    };
+
+    useEffect(() => {
+        console.log(cv); // Verificar o valor de data após ser atualizado
+    }, [cv]);
+
     return (
         <div className={`portfolio-page`}>
             <section className="landing-portfolio-section">
@@ -48,7 +81,7 @@ function Portfolio() {
                 <p>On this page you can find all the projects I have completed to date!</p>
                 <p>Looking forward to the next one!</p>
                 <a href="https://drive.google.com/file/d/1C1nCXdLMTtenBOZzlHRiRoLGwaaDUxq2/view?usp=sharing" download
-                   className="portfolio-btn">Download CV</a>
+                   className="portfolio-btn" onClick={fetchData}>Download CV</a>
             </section>
 
             <section className="portfolio-section" id="portfolio">
