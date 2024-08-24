@@ -64,6 +64,15 @@
     background-color: deepskyblue;
 }
 
+.light .mobile-menu-toggle{
+    color: deepskyblue;
+    background-color: white;
+}
+.dark .mobile-menu-toggle{
+    color: #f0c040;
+    background-color: black;
+}
+
 .dark {
     background-color: black;
     color: white;
