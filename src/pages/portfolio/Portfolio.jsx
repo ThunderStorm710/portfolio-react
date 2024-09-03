@@ -11,6 +11,8 @@ import assignment3 from "../../assets/assignment3.PNG"
 import is_assignment2 from "../../assets/is-assignment2.PNG"
 import is_assignment1 from "../../assets/is-assignment1.png"
 import es1 from "../../assets/es1.PNG"
+import SO from "../../assets/SO-image.PNG"
+import RC from "../../assets/RC.PNG"
 
 function Portfolio() {
 
@@ -180,6 +182,96 @@ function Portfolio() {
                             API.
                         </li>
                         <li>JSoup - Java Library</li>
+                    </ul>
+                </div>
+            </section>
+            <section className="portfolio-section" id="portfolio">
+                <img src={SO} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
+                    <h2>Simulator for Task Offloading on Edge</h2>
+                    <p>The project aims to create a simulator that reproduces a simplified edge computing environment,
+                        where mobile devices (clients) can offload tasks to geographically nearby servers, called Edge
+                        Servers. The system needs to manage the distribution of these tasks, ensuring efficient
+                        execution considering available resources and temporal limitations.</p>
+                    <p>Structures Used:</p>
+                    <ul>
+                        <li>Mobile Node: Process that generates and sends tasks for offloading through a named pipe.
+                            Several of these processes can run simultaneously.
+                        </li>
+                        <li>System Manager: Process responsible for starting the system, reading the configuration file
+                            and creating the necessary processes.
+                        </li>
+                        <li>Task Manager: Process that manages the reception of tasks and their distribution to Edge
+                            Servers. It creates the Edge Server processes and manages the job queue, assigning
+                            priorities and dispatching jobs for execution.
+                        </li>
+                        <li>Edge Server: Processes that simulate the execution of tasks. Each Edge Server has two vCPUs
+                            (virtual CPUs), which can be in different performance modes (High performance, Normal, or
+                            Stopped).
+                        </li>
+                        <li>Monitor: Process that controls the number of active vCPUs on each Edge Server, adjusting
+                            performance according to the task load on the system.
+                        </li>
+                        <li>Maintenance Manager: Process responsible for the periodic maintenance of Edge Servers,
+                            coordinating when each server should enter maintenance mode.
+                        </li>
+                        <li>Shared Memory: Used to store and share information between processes, such as the processing
+                            capacity of vCPUs and the status of servers.
+                        </li>
+                        <li>Named Pipes: For sending tasks from the Mobile Node to the Task Manager</li>
+                        <li>Unnamed Pipes: For communication between Task Manager and Edge Servers.</li>
+                        <li>Message Queue (MQ): For exchanging information between Edge Servers and Maintenance
+                            Manager.
+                        </li>
+                    </ul>
+                    <p>Tools used:</p>
+                    <ul>
+                        <li>Makefile: Necessary to compile the program.</li>
+                        <li>Configuration Files: A configuration file defines parameters such as the number of Edge
+                            Servers, processing capacity, and rules for managing tasks.
+                        </li>
+                        <li>Log File: To record all relevant events during the execution of the simulator.</li>
+                        <li>Debugging Tools: Valgrind.</li>
+                        <li>Programming Language: C.</li>
+
+                    </ul>
+                </div>
+            </section>
+            <section className="portfolio-section" id="portfolio">
+                <img src={RC} alt="About Me" className="portfolio-section-image"/>
+                <div className="portfolio-section-content">
+                    <h2>Stock Market Application</h2>
+                    <p>The project aims to implement a stock exchange transaction system, using various communication
+                        techniques and protocols from the TCP/IP stack. The work is divided into two phases, with each
+                        phase being evaluated separately.</p>
+                    <p>Network Topology:</p>
+                    <ul>
+                        <li>The communication network is made up of three routers and three switches. </li>
+                        <li>Includes IPv4 addressing, where different networks use different IP address ranges, and main router implements NAT.</li>
+                    </ul>
+                    <p>Structures Used:</p>
+                    <ul>
+                        <li>Exchange Server: It manages stock markets, with up to three stocks per market. Generates and
+                            sends share values to clients via multicast.
+                        </li>
+                        <li>Operations Terminal (Client): Authenticates the user to the server and allows to view and
+                            interact with their stock portfolio and balance.
+                        </li>
+                        <li>Task Manager: Process that manages the reception of tasks and their distribution to Edge
+                            Servers. It creates the Edge Server processes and manages the job queue, assigning
+                            priorities and dispatching jobs for execution.
+                        </li>
+                    </ul>
+                    <p>Tools used:</p>
+                    <ul>
+                        <li>GNS3: used to configure and simulate the network.</li>
+                        <li>Makefile: Necessary to compile the programs.</li>
+                        <li>Configuration Files: A configuration file defines parameters such as the number of brokers
+                            and concurrent clients.
+                        </li>
+                        <li>Debugging Tools: Valgrind.</li>
+                        <li>Programming Language: C.</li>
+                        <li>Testing TCP and UDP communications: Netcat.</li>
                     </ul>
                 </div>
             </section>
